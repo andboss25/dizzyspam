@@ -4,25 +4,24 @@ import platform
 from colorama import Fore
 import os
 import requests
+import discord
+from discord.ext import commands
 
-def clear(): # Clear screen
-    if platform.system() == "Windows":
+def clear():
         os.system("cls")
-    else:
-        os.system("clear")
 
 def sysm(message:str,id:int): # System message
+    switch #as someone who doesnt do much python i did NOT know that switch statements like this existed in python.
     if id == 0:
         print( Fore.GREEN + "[+] " + message + Fore.WHITE)
-    if id == 1:
+    elif id == 1:
         print( Fore.RED + "[-] " + message + Fore.WHITE)
-    if id == 2:
+    elif id == 2:
         print(Fore.MAGENTA + "[$] " + message + Fore.WHITE)
 
 os.system("pip install discord-py==1.7.3")
 clear()
-import discord
-from discord.ext import commands
+
 sysm("Got right version of discord-py!",0)
 sysm("Dizzyspam (by spidermanfromearth69.)",2)
 sysm("Put the token in token.txt likethis : TOKEN - NAME",2)
@@ -62,8 +61,8 @@ while True:
                                 sysm("Error! Probably ratelimit (don't worry about it too much)",1)
 
         client.run(token,bot=False)
-
-    elif option == "2":
-        break
+    # I dont know why the empty return statement existed, dont know what it does but the exit function exists sooo.
+    elif option == "2"
+        exit()
     else:
         sysm("Not an option!",1)
